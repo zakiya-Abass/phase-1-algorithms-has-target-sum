@@ -5,6 +5,21 @@ function hasTargetSum(array, target) {
 /* 
   Write the Big O time complexity of your function here
 */
+function hasTargetSum(array, target) {
+  // Write your algorithm here
+  let sum = [];
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 1; j < array.length; j++) {
+      if (i !== j && array[i] + array[j] === target) {
+        sum.push(true);
+        break;
+      }
+    }
+  }
+
+  if (sum[0] === undefined) return false;
+  else return true;
+}
 
 /* 
   Add your pseudocode here
